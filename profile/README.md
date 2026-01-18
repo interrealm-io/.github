@@ -20,7 +20,7 @@ Agents → Semantic Artifacts → Realms → Execution
 
 | Repo | Description | Status |
 |------|-------------|--------|
-| [**semantic-artifacts**](https://github.com/interrealm-io/semantic-artifacts) | Specification for typed AI capabilities | 📄 v1 Draft |
+| [**semantic-artifacts**](https://github.com/interrealm-io/semantic-artifacts-spec) | Specification for typed AI capabilities | 📄 v1 Draft |
 | **interrealm-spec** | Realm routing & federation protocol | 🔜 Coming |
 | **interrealm-sdk** | TypeScript/Python agent SDK | 🔜 Coming |
 | **mcp-bridge** | Bidirectional MCP ↔ Artifact translation | 🔜 Coming |
