@@ -97,8 +97,7 @@ InterRealm is the open specification. [Realmtrix Edge](https://realmtrix.com) is
 
 ## Get Involved
 
-- 📖 [Read the Semantic Artifacts spec](https://github.com/interrealm-io/semantic-artifacts)
-- 💬 [Discussions](https://github.com/orgs/interrealm-io/discussions)
+- 📖 [Read the Semantic Artifacts spec](https://github.com/interrealm-io/semantic-artifacts-spec)
 - 🐦 Follow updates (Twitter/X coming)
 
 ---
