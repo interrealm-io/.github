@@ -1,108 +1,35 @@
-# InterRealm
 
-**The semantic network for AI agents.**
-
----
-
-We're building the infrastructure layer that lets AI agents discover, invoke, and trust capabilities across boundaries.
-
-```
-Agents → Semantic Artifacts → Realms → Execution
-```
-
-**Semantic Artifacts** — Typed AI capabilities (entities, prompts, tools) that translate to/from MCP  
-**Realms** — Logical namespaces with membership, policy, and federation  
-**Routing** — Semantic resolution that abstracts MCP, HTTP, and cross-realm invocation  
+- [ ] Genesis block + core block/chain types
+- [ ] Realm registration and signature verification
+- [ ] BoltDB-backed local chain storage
+- [ ] libp2p-based P2P gossip layer
+- [ ] `realmctl` CLI (register, resolve, node, chain)
+- [ ] Go SDK (`pkg/realmnet`)
+- [ ] Light node support
+- [ ] InterRealm spec v0.1 publication
+- [ ] JS/TS client SDK (`interrealm-js`)
 
 ---
 
-## Repositories
+## Contributing
 
-| Repo | Description | Status |
-|------|-------------|--------|
-| [**semantic-artifacts**](https://github.com/interrealm-io/semantic-artifacts-spec) | Specification for typed AI capabilities | 📄 v1 Draft |
-| **interrealm-spec** | Realm routing & federation protocol | 🔜 Coming |
-| **interrealm-sdk** | TypeScript/Python agent SDK | 🔜 Coming |
-| **mcp-bridge** | Bidirectional MCP ↔ Artifact translation | 🔜 Coming |
+`realmnet` is an open protocol. Contributions, RFCs, and feedback are welcome.
 
----
-
-## The Problem
-
-AI tooling is fragmented:
-- MCP servers are point-to-point
-- No semantic typing across tools  
-- No governance layer
-- No federation across organizations
-- Every agent is an island
-
-## The Solution
-
-InterRealm introduces:
-- **Entities as first-class types** — Prompts and tools bind to schemas
-- **Realms as logical boundaries** — Namespace capabilities with membership and policy
-- **Semantic routing** — Agents request capabilities, not endpoints
-- **Federation** — Cross-realm trust and invocation
-
----
-
-## Quick Example
-
-```yaml
-# A Semantic Artifact
-apiVersion: interrealm.io/semantic-artifacts/v1
-kind: Artifact
-metadata:
-  name: invoice-processor
-  version: 1.0.0
-
-entities:
-  - name: Invoice
-    schema:
-      type: object
-      properties:
-        vendor: { type: string }
-        amount: { type: number }
-
-prompts:
-  - name: extract-invoice
-    output:
-      entity: Invoice  # ← Typed output
+```bash
+git clone https://github.com/interrealm-io/realmnet
+cd realmnet
+go mod tidy
+go test ./...
 ```
 
-```typescript
-// Agent SDK
-const realm = await InterRealm.connect("realm:acme:finance");
-const tools = await realm.discoverTools();
-
-// LLM sees typed tools, SDK handles routing
-const invoice = await realm.invoke("invoice-processor.extract-invoice", {
-  document: pdfResource
-});
-```
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a pull request.
 
 ---
 
-## Backed By
+## License
 
-<a href="https://realmtrix.com">
-  <img src="https://realmtrix.com/logo.svg" alt="Realmtrix" height="32">
-</a>
-
-**Realmtrix** — Enterprise AI infrastructure  
-
-InterRealm is the open specification. [Realmtrix Edge](https://realmtrix.com) is the enterprise platform with managed realms, LDAP/OIDC integration, audit dashboards, and support.
+Apache 2.0 — see [LICENSE](./LICENSE)
 
 ---
 
-## Get Involved
-
-- 📖 [Read the Semantic Artifacts spec](https://github.com/interrealm-io/semantic-artifacts)
-- 💬 [Discussions](https://github.com/orgs/interrealm-io/discussions)
-- 🐦 Follow updates (Twitter/X coming)
-
----
-
-<p align="center">
-  <i>Just as the Internet connected networks, InterRealm connects AI capability domains.</i>
-</p>
+> Built by [Realmtrix](https://realmtrix.com) · Protocol spec at [interrealm.io](https://interrealm.io)
