@@ -48,7 +48,7 @@ Learning Net brings a complete, topology-aware network of **283,381 nodes and 49
 InterRealm infrastructure focuses on shifting open public datasets from isolated centralized collection pools into fully distributed, actionable networks:
 
 1.  **Local Extension Protocols:** Engineering isolated, namespaced multi-table architectures so school districts can map localized curriculum variations safely without getting clobbered by upstream releases.
-2.  **Federation Tooling:** Standardizing schema merge-semantics across independent trusted instances using predictable, cryptographic spine-mapping.
+2.  **Federation Tooling:** Standardizing schema merge-semantics across independent trusted instances using predictable, cryptographic secure-mapping.
 3.  **Upstream Drift Reporting:** Building open diagnostic engines that capture structural database mutations, feeding changelogs directly back to upstream aggregators.
 
 ---
